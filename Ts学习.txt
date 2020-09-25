@@ -1,0 +1,14 @@
+一、基础类型
+	string number object never boolean void enum(枚举) [](数组) 元组 any as(类型断言)
+
+二、变量声明
+	var let const
+
+三、接口
+  可选属性？  只读属性readonly  额外的属性检查 函数类型
+  可索引的类型   类类型 implements   继承接口 extends
+  混合类型  接口继承类
+
+四、类
+  类
+	

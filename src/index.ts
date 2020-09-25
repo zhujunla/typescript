@@ -1,19 +1,22 @@
-interface Counter {
-  (start: number): string;
-  interval: number;
-  reset(): void;
+class Animal {
+  name:string;
+  constructor(theNmae:string){
+    this.name = theNmae;
+  }
+  move(distanceInMeters:number = 10){
+    console.log(`${this.name}Animal moved ${distanceInMeters}m.`);
+  }
 }
 
-function getCounter(): Counter {
-  let counter = <Counter>function (start: number) { };
-  counter.interval = 123;
-  counter.reset = function () { };
-  return counter;
+class Dog extends Animal{
+  // name:string;
+  constructor(name: string) { super(name); }
+  move(distance = 45){
+    super.move(distance)
+  }
 }
+let dog = new Dog("旺财");
 
-let c = getCounter();
-c(10);
-c.reset();
-c.interval = 5.0;
-
-console.info(c)
+console.info(dog)
+// dog.bark();
+dog.move()
